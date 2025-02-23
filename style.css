@@ -1,0 +1,134 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #000;
+  overflow: auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('image1.jpg') no-repeat center center/cover;
+  animation: slideshow 30s infinite;
+}
+
+@keyframes slideshow {
+  0% { background-image: url('bg1.jpg'); }
+  10% { background-image: url('bg2.jpg'); }
+  20% { background-image: url('bg3.png'); }
+  30% { background-image: url('bg4.jpg'); }
+  40% { background-image: url('bg5.jpg'); }
+  50% { background-image: url('bg6.jpg'); }
+  60% { background-image: url('vanaras.jpg'); }
+  70% { background-image: url('manali.jpeg'); }
+  80% { background-image: url('rishikesh.jpg'); }
+  90% { background-image: url('goa.jpg'); }
+  100% { background-image: url('andaman.jpg'); }
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+#places {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.tour-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tour-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+.tour-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tour-item h3 {
+  margin: 10px 0;
+}
+
+.tour-item p {
+  margin: 5px 0;
+}
+
+.tour-item button {
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tour-item button:hover {
+  background: #e64a19;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
